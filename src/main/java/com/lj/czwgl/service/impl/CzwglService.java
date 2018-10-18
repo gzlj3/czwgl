@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.lj.czwgl.domain.House;
+import com.lj.czwgl.domain.HouseDto;
 import com.lj.czwgl.repository.HouseRepository;
 import com.lj.czwgl.service.ICzwglService;
 import com.lj.czwgl.utils.Utils;
@@ -37,5 +38,14 @@ public class CzwglService implements ICzwglService {
 	public List<House> querySdbList(String yyhid) throws Exception {
 		Iterable<House> iter = houseRepository.findByYyhidAndZhxmNotNull(yyhid);
 		return Utils.convertIterToList(iter);
+	}
+
+	@Override
+	public void updateSdbList(HouseDto houseDto) throws Exception {
+		List<House> rows = houseDto.getRows();
+		rows.forEach(house -> {
+			houseRepository.updateHouseSdb(house.getDbcds(), house.getSbcds(),
+					house.getHouseid());
+		});
 	}
 }

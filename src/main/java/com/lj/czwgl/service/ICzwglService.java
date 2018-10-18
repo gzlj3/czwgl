@@ -1,7 +1,9 @@
 package com.lj.czwgl.service;
 
 import java.util.List;
+
 import com.lj.czwgl.domain.House;
+import com.lj.czwgl.domain.HouseDto;
 
 public interface ICzwglService {
 
@@ -13,4 +15,5 @@ public interface ICzwglService {
 
 	public void deleteFy(House house) throws Exception;
 
+	public void updateSdbList(HouseDto houseDto) throws Exception;
 }

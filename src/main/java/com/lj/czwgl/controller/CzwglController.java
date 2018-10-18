@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.lj.czwgl.common.Constants;
 import com.lj.czwgl.common.Results;
 import com.lj.czwgl.domain.House;
+import com.lj.czwgl.domain.HouseDto;
 import com.lj.czwgl.service.ICzwglService;
 import com.lj.czwgl.utils.Utils;
 
@@ -84,9 +85,17 @@ public class CzwglController {
 	}
 
 	@PostMapping(path = "/sdb_list")
-	public Results<House> postSdbList(String s) {
-		Results<House> successResults = (Results<House>) Results
-				.getSuccessResults();
-		return successResults;
+	public Results<House> postSdbList(@RequestBody HouseDto houseDto) {
+		try {
+			czwglService.updateSdbList(houseDto);
+			Results<House> successResults = (Results<House>) Results
+					.getSuccessResults();
+			return successResults;
+		} catch (Exception e) {
+			e.printStackTrace();
+			Results<House> errorResults = (Results<House>) Results
+					.getErrorResults(e.getMessage());
+			return errorResults;
+		}
 	}
 }
