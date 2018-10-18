@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.lj.czwgl.domain.House;
 
 public interface HouseRepository extends CrudRepository<House, String> {
-
+	Iterable<House> findByYyhidAndZhxmNotNull(String yyhid);
 }
