@@ -24,7 +24,7 @@ import com.lj.czwgl.utils.Utils;
 @SuppressWarnings("unchecked")
 public class CzwglController {
 
-	private final String yyhid = "1";
+	private final String yzhid = "1";
 
 	@Autowired
 	private ICzwglService czwglService;
@@ -32,7 +32,7 @@ public class CzwglController {
 	@GetMapping(path = "/fygl_list")
 	public Results<House> getFyglList() {
 		try {
-			List<House> result = czwglService.queryFyList();
+			List<House> result = czwglService.queryFyList(yzhid);
 			Results<House> successResults = (Results<House>) Results
 					.getSuccessResults(result);
 			return successResults;
@@ -51,7 +51,7 @@ public class CzwglController {
 			if (action == Constants.BUTTON_ADDFY) {
 				String id = Utils.getUUID32();
 				house.setHouseid(id);
-				house.setYyhid(yyhid);
+				house.setYzhid(yzhid);
 				czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_EDITFY) {
 				czwglService.saveFy(house);
@@ -72,7 +72,7 @@ public class CzwglController {
 	@GetMapping(path = "/sdb_list")
 	public Results<House> getSdbList() {
 		try {
-			List<House> result = czwglService.querySdbList(yyhid);
+			List<House> result = czwglService.querySdbList(yzhid);
 			Results<House> successResults = (Results<House>) Results
 					.getSuccessResults(result);
 			return successResults;
@@ -88,8 +88,21 @@ public class CzwglController {
 	public Results<House> postSdbList(@RequestBody HouseDto houseDto) {
 		try {
 			czwglService.updateSdbList(houseDto);
+			return this.getSdbList();
+		} catch (Exception e) {
+			e.printStackTrace();
+			Results<House> errorResults = (Results<House>) Results
+					.getErrorResults(e.getMessage());
+			return errorResults;
+		}
+	}
+
+	@GetMapping(path = "/zd_list")
+	public Results<House> getZdList() {
+		try {
+			HouseDto result = czwglService.queryZdList(yzhid);
 			Results<House> successResults = (Results<House>) Results
-					.getSuccessResults();
+					.getSuccessResults(result);
 			return successResults;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -98,4 +111,18 @@ public class CzwglController {
 			return errorResults;
 		}
 	}
+
+	@PostMapping(path = "/zd_list")
+	public Results<House> postZdList(@RequestBody HouseDto houseDto) {
+		try {
+			czwglService.updateZdList(houseDto);
+			return this.getSdbList();
+		} catch (Exception e) {
+			e.printStackTrace();
+			Results<House> errorResults = (Results<House>) Results
+					.getErrorResults(e.getMessage());
+			return errorResults;
+		}
+	}
+
 }

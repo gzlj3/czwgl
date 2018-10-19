@@ -7,7 +7,13 @@ import org.springframework.data.repository.CrudRepository;
 import com.lj.czwgl.domain.House;
 
 public interface HouseRepository extends CrudRepository<House, String> {
-	Iterable<House> findByYyhidAndZhxmNotNull(String yyhid);
+	Iterable<House> findByYzhidAndZhxmNotNullOrderByFwmc(String yzhid);
+
+	Iterable<House> findByYzhidOrderByFwmc(String yzhid);
+	
+	@Modifying
+	@Query("select u from House u where u.yzhid=?1 and u.szrq<=curdate() order by u.fwmc")
+	Iterable<House> queryZdList(String yzhid);
 
 	@Modifying
 	@Query("update House u set u.dbcds = ?1, u.sbcds=?2 where u.houseid = ?3")

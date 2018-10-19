@@ -20,4 +20,12 @@ public final class Utils {
 		});
 		return result;
 	}
+
+	public static Integer getInteger(Integer value) {
+		return value == null ? new Integer(0) : value;
+	}
+
+	public static Double getDouble(Double value) {
+		return value == null ? new Double(0) : value;
+	}
 }
