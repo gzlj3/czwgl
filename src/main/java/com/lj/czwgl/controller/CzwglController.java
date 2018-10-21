@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lj.czwgl.common.Constants;
 import com.lj.czwgl.common.Results;
 import com.lj.czwgl.domain.House;
 import com.lj.czwgl.domain.HouseDto;
+import com.lj.czwgl.domain.Housefy;
 import com.lj.czwgl.service.ICzwglService;
 import com.lj.czwgl.utils.Utils;
 
@@ -52,6 +54,7 @@ public class CzwglController {
 				String id = Utils.getUUID32();
 				house.setHouseid(id);
 				house.setYzhid(yzhid);
+				house.setSfsz("1"); // 初始签约设置为已收租状态
 				czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_EDITFY) {
 				czwglService.saveFy(house);
@@ -117,6 +120,34 @@ public class CzwglController {
 		try {
 			czwglService.updateZdList(houseDto);
 			return this.getSdbList();
+		} catch (Exception e) {
+			e.printStackTrace();
+			Results<House> errorResults = (Results<House>) Results
+					.getErrorResults(e.getMessage());
+			return errorResults;
+		}
+	}
+
+	@GetMapping(path = "/lastzd")
+	public Results<Housefy> getLastZdList(@RequestParam String houseid) {
+		try {
+			List<Housefy> result = czwglService.queryLastZdList(houseid);
+			Results<Housefy> successResults = (Results<Housefy>) Results
+					.getSuccessResults(result);
+			return successResults;
+		} catch (Exception e) {
+			e.printStackTrace();
+			Results<Housefy> errorResults = (Results<Housefy>) Results
+					.getErrorResults(e.getMessage());
+			return errorResults;
+		}
+	}
+
+	@GetMapping(path = "/handlezd")
+	public Results<House> handleZd(@RequestParam String housefyid) {
+		try {
+			czwglService.processQrsz(housefyid);
+			return this.getFyglList();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Results<House> errorResults = (Results<House>) Results

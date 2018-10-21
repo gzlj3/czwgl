@@ -1,11 +1,16 @@
 package com.lj.czwgl.repository;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.lj.czwgl.domain.Housefy;
 
 public interface HousefyRepository extends CrudRepository<Housefy, String> {
 	Housefy findFirstByHouseidOrderByRq1Desc(String hosueid);
+
+	List<Housefy> findTop6ByHouseidOrderBySzrqDesc(String houseid);
+
 	// Iterable<Housefy> findByYzhidAndZhxmNotNullOrderByFwmc(String yzhid);
 	//
 	// Iterable<Housefy> findByYzhidOrderByFwmc(String yzhid);

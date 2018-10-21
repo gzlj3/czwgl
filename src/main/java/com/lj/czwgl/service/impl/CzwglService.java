@@ -1,7 +1,11 @@
 package com.lj.czwgl.service.impl;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -82,11 +86,98 @@ public class CzwglService implements ICzwglService {
 		iter.forEach(house -> {
 			Housefy housefy = housefyRepository
 					.findFirstByHouseidOrderByRq1Desc(house.getHouseid());
-			if(housefy == null){
-				Housefy newHousefy = new Housefy();
-				newHousefy.setHousefyid(Utils.getUUID32());
+			if (housefy == null) {
+				try {
+					// 生成新帐单
+					Housefy newHousefy = this.createNewHousefy(house);
+					// 结转房屋数据
+					housefyRepository.save(newHousefy);
+					house.setSfsz("0"); // 设置房屋为未收租
+					houseRepository.save(house);
+				} catch (Exception e) {
+					throw new RuntimeException(e);
+				}
 			}
 		});
+	}
+
+	@Override
+	public List<Housefy> queryLastZdList(String houseid) throws Exception {
+		return housefyRepository.findTop6ByHouseidOrderBySzrqDesc(houseid);
+	}
+
+	@Override
+	public void processQrsz(String housefyid) throws Exception {
+		Optional<Housefy> housefyOpt = housefyRepository.findById(housefyid);
+		if (!housefyOpt.isPresent())
+			throw new Exception("房源费用ID不存在：" + housefyid);
+		Housefy housefy = housefyOpt.get();
+		House house = houseRepository.findById(housefy.getHouseid()).get();
+
+		jzHouse(house, housefy);
+
+		housefyRepository.save(housefy);
+		houseRepository.save(house);
+	}
+
+	private void jzHouse(House house, Housefy housefy) throws Exception {
+		// 更新房源上次收租日期
+		house.setSzrq(housefy.getSzrq());
+		// 更新房源结转数据
+		house.setDscds(housefy.getDbcds());
+		house.setSscds(housefy.getSbcds());
+		house.setDbcds(null);
+		house.setSbcds(null);
+		// 是否收租
+		house.setSfsz("1");
+		housefy.setSfsz("1");
+	}
+
+	private Housefy createNewHousefy(House house) throws Exception {
+		// 计算收租范围
+		Date szrq = house.getSzrq();
+		if (szrq == null)
+			throw new Exception("收租日期不能为空！");
+
+		Date xcszrq = Utils.relativeDate(szrq, Calendar.MONTH, 1);
+		Date rq1 = Utils.relativeDate(szrq, Calendar.MONTH, -1);
+		Date rq2 = Utils.relativeDate(szrq, Calendar.DAY_OF_MONTH, -1);
+
+		Housefy newHousefy = new Housefy();
+		// 主键
+		newHousefy.setHousefyid(Utils.getUUID32());
+		// 日期范围
+		newHousefy.setSzrq(xcszrq);
+		newHousefy.setRq1(rq1);
+		newHousefy.setRq2(rq2);
+
+		// 房屋信息
+		newHousefy.setHouseid(house.getHouseid());
+		newHousefy.setFwmc(house.getFwmc());
+		newHousefy.setZhxm(house.getZhxm());
+		newHousefy.setCzje(house.getCzje());
+		// 电费数据
+		newHousefy.setDbcds(house.getDbcds());
+		newHousefy.setDscds(house.getDscds());
+		newHousefy.setDgtds(house.getDgtds());
+		newHousefy.setDdj(house.getDdj());
+
+		// 水费数据
+		newHousefy.setSbcds(house.getSbcds());
+		newHousefy.setSscds(house.getSscds());
+		newHousefy.setSgtds(house.getSgtds());
+		newHousefy.setSdj(house.getSdj());
+
+		// 房屋其它费用
+		newHousefy.setGlf(house.getGlf());
+		newHousefy.setWlf(house.getWlf());
+		newHousefy.setLjf(house.getLjf());
+		newHousefy.setQtf(house.getQtf());
+
+		// 是否收租
+		newHousefy.setSfsz("0");
+
+		return newHousefy;
 	}
 
 	private Double jsFwfy(House house) throws Exception {
