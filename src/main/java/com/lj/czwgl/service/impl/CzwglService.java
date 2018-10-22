@@ -46,7 +46,7 @@ public class CzwglService implements ICzwglService {
 	@Override
 	public List<House> querySdbList(String yzhid) throws Exception {
 		Iterable<House> iter = houseRepository
-				.findByYzhidAndZhxmNotNullOrderByFwmc(yzhid);
+				.findByYzhidAndSfszAndZhxmNotNullOrderByFwmc(yzhid, "1");
 		return Utils.convertIterToList(iter);
 	}
 

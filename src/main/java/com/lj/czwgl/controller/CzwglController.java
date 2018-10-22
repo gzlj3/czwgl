@@ -91,7 +91,7 @@ public class CzwglController {
 	public Results<House> postSdbList(@RequestBody HouseDto houseDto) {
 		try {
 			czwglService.updateSdbList(houseDto);
-			return this.getSdbList();
+			return this.getFyglList();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Results<House> errorResults = (Results<House>) Results
@@ -119,7 +119,7 @@ public class CzwglController {
 	public Results<House> postZdList(@RequestBody HouseDto houseDto) {
 		try {
 			czwglService.updateZdList(houseDto);
-			return this.getSdbList();
+			return this.getFyglList();
 		} catch (Exception e) {
 			e.printStackTrace();
 			Results<House> errorResults = (Results<House>) Results

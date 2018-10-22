@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.lj.czwgl.domain.House;
 
 public interface HouseRepository extends CrudRepository<House, String> {
-	Iterable<House> findByYzhidAndZhxmNotNullOrderByFwmc(String yzhid);
+	Iterable<House> findByYzhidAndSfszAndZhxmNotNullOrderByFwmc(String yzhid,String sfsz);
 
 	Iterable<House> findByYzhidOrderByFwmc(String yzhid);
 	
@@ -17,5 +17,5 @@ public interface HouseRepository extends CrudRepository<House, String> {
 
 	@Modifying
 	@Query("update House u set u.dbcds = ?1, u.sbcds=?2 where u.houseid = ?3")
-	void updateHouseSdb(int dbcds, int sbcds, String houseid);
+	void updateHouseSdb(Integer dbcds, Integer sbcds, String houseid);
 }
