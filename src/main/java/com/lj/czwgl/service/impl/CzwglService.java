@@ -1,6 +1,5 @@
 package com.lj.czwgl.service.impl;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -86,17 +85,18 @@ public class CzwglService implements ICzwglService {
 		iter.forEach(house -> {
 			Housefy housefy = housefyRepository
 					.findFirstByHouseidOrderByRq1Desc(house.getHouseid());
-			if (housefy == null) {
-				try {
-					// 生成新帐单
-					Housefy newHousefy = this.createNewHousefy(house);
-					// 结转房屋数据
-					housefyRepository.save(newHousefy);
-					house.setSfsz("0"); // 设置房屋为未收租
-					houseRepository.save(house);
-				} catch (Exception e) {
-					throw new RuntimeException(e);
-				}
+			if (housefy != null && !"1".equals(housefy.getSfsz()))
+				throw new RuntimeException("有帐单未结清(" + housefy.getFwmc()
+						+ ")，生成新帐单失败！");
+			try {
+				// 生成新帐单
+				Housefy newHousefy = this.createhousefy(house);
+				// 结转房屋数据
+				housefyRepository.save(newHousefy);
+				house.setSfsz("0"); // 设置房屋为未收租
+				houseRepository.save(house);
+			} catch (Exception e) {
+				throw new RuntimeException(e);
 			}
 		});
 	}
@@ -133,7 +133,7 @@ public class CzwglService implements ICzwglService {
 		housefy.setSfsz("1");
 	}
 
-	private Housefy createNewHousefy(House house) throws Exception {
+	private Housefy createhousefy(House house) throws Exception {
 		// 计算收租范围
 		Date szrq = house.getSzrq();
 		if (szrq == null)
@@ -143,41 +143,49 @@ public class CzwglService implements ICzwglService {
 		Date rq1 = Utils.relativeDate(szrq, Calendar.MONTH, -1);
 		Date rq2 = Utils.relativeDate(szrq, Calendar.DAY_OF_MONTH, -1);
 
-		Housefy newHousefy = new Housefy();
+		Housefy housefy = new Housefy();
 		// 主键
-		newHousefy.setHousefyid(Utils.getUUID32());
+		housefy.setHousefyid(Utils.getUUID32());
 		// 日期范围
-		newHousefy.setSzrq(xcszrq);
-		newHousefy.setRq1(rq1);
-		newHousefy.setRq2(rq2);
+		housefy.setSzrq(xcszrq);
+		housefy.setRq1(rq1);
+		housefy.setRq2(rq2);
 
 		// 房屋信息
-		newHousefy.setHouseid(house.getHouseid());
-		newHousefy.setFwmc(house.getFwmc());
-		newHousefy.setZhxm(house.getZhxm());
-		newHousefy.setCzje(house.getCzje());
+		housefy.setHouseid(house.getHouseid());
+		housefy.setFwmc(house.getFwmc());
+		housefy.setZhxm(house.getZhxm());
+		housefy.setCzje(house.getCzje());
 		// 电费数据
-		newHousefy.setDbcds(house.getDbcds());
-		newHousefy.setDscds(house.getDscds());
-		newHousefy.setDgtds(house.getDgtds());
-		newHousefy.setDdj(house.getDdj());
+		housefy.setDbcds(house.getDbcds());
+		housefy.setDscds(house.getDscds());
+		housefy.setDsyds(housefy.getDbcds() - housefy.getDscds());
+		housefy.setDgtds(house.getDgtds());
+		housefy.setDdj(house.getDdj());
+		housefy.setDfhj(jsdf(house));
 
 		// 水费数据
-		newHousefy.setSbcds(house.getSbcds());
-		newHousefy.setSscds(house.getSscds());
-		newHousefy.setSgtds(house.getSgtds());
-		newHousefy.setSdj(house.getSdj());
+		housefy.setSbcds(house.getSbcds());
+		housefy.setSscds(house.getSscds());
+		housefy.setSsyds(housefy.getSbcds() - housefy.getSscds());
+		housefy.setSgtds(house.getSgtds());
+		housefy.setSdj(house.getSdj());
+		housefy.setSfhj(jssf(house));
 
 		// 房屋其它费用
-		newHousefy.setGlf(house.getGlf());
-		newHousefy.setWlf(house.getWlf());
-		newHousefy.setLjf(house.getLjf());
-		newHousefy.setQtf(house.getQtf());
+		housefy.setGlf(house.getGlf());
+		housefy.setWlf(house.getWlf());
+		housefy.setLjf(house.getLjf());
+		housefy.setQtf(house.getQtf());
+		housefy.setSyjzf(house.getSyjzf());
+
+		// 房屋合计费
+		housefy.setFyhj(housefy.getDfhj() + housefy.getSfhj() + jsqtfhj(house));
 
 		// 是否收租
-		newHousefy.setSfsz("0");
+		housefy.setSfsz("0");
 
-		return newHousefy;
+		return housefy;
 	}
 
 	private Double jsFwfy(House house) throws Exception {
@@ -185,30 +193,44 @@ public class CzwglService implements ICzwglService {
 			throw new Exception("未抄水电表");
 
 		// 计算电费
-		Integer dsyds = Utils.getInteger(house.getDbcds())
-				- Utils.getInteger(house.getDscds())
-				+ Utils.getInteger(house.getDgtds());
-		Double df = dsyds * Utils.getDouble(house.getDdj());
+		Double df = jsdf(house);
 		if (df < 0)
 			throw new Exception("电费计算小于0");
 		// 计算水费
-		Integer ssyds = Utils.getInteger(house.getSbcds())
-				- Utils.getInteger(house.getSscds())
-				+ Utils.getInteger(house.getSgtds());
-		Double sf = ssyds * Utils.getDouble(house.getSdj());
+		Double sf = jssf(house);
 		if (sf < 0)
 			throw new Exception("水费计算小于0");
 		// 计算合计费
-		Double fwfy = df + sf + Utils.getInteger(house.getCzje())
-				+ Utils.getInteger(house.getWlf())
-				+ Utils.getInteger(house.getGlf())
-				+ Utils.getInteger(house.getLjf())
-				+ Utils.getDouble(house.getQtf())
-				+ Utils.getDouble(house.getSyjzf());
+		Double fwfy = df + sf + jsqtfhj(house);
 		if (fwfy <= 0)
 			throw new Exception("无帐单费用");
 
 		return fwfy;
 	}
 
+	private Double jsdf(House house) {
+		Integer dsyds = Utils.getInteger(house.getDbcds())
+				- Utils.getInteger(house.getDscds())
+				+ Utils.getInteger(house.getDgtds());
+		Double df = dsyds * Utils.getDouble(house.getDdj());
+		return df;
+	}
+
+	private Double jssf(House house) {
+		Integer ssyds = Utils.getInteger(house.getSbcds())
+				- Utils.getInteger(house.getSscds())
+				+ Utils.getInteger(house.getSgtds());
+		Double sf = ssyds * Utils.getDouble(house.getSdj());
+		return sf;
+	}
+
+	private Double jsqtfhj(House house) {
+		Double qtfy = Utils.getInteger(house.getCzje())
+				+ Utils.getInteger(house.getWlf())
+				+ Utils.getInteger(house.getGlf())
+				+ Utils.getInteger(house.getLjf())
+				+ Utils.getDouble(house.getQtf())
+				+ Utils.getDouble(house.getSyjzf());
+		return qtfy;
+	}
 }

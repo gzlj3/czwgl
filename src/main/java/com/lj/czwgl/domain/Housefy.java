@@ -7,38 +7,45 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 
 /**
  * Housefy entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "housefy", catalog = "czwgl")
+@Table(name = "housefy", catalog = "czwgl", uniqueConstraints = @UniqueConstraint(columnNames = {
+		"houseid", "szrq" }))
 public class Housefy implements java.io.Serializable {
 
 	// Fields
 
 	private String housefyid;
 	private String houseid;
+	private Date szrq;
 	private String fwmc;
 	private String zhxm;
 	private Date rq1;
 	private Date rq2;
+	private Integer czje;
 	private Integer dscds;
 	private Integer dbcds;
+	private Integer dsyds;
 	private Integer dgtds;
 	private Double ddj;
+	private Double dfhj;
 	private Integer sscds;
 	private Integer sbcds;
+	private Integer ssyds;
 	private Integer sgtds;
 	private Double sdj;
+	private Double sfhj;
 	private Integer wlf;
 	private Integer glf;
 	private Integer ljf;
 	private Double syjzf;
 	private Double qtf;
-	private Integer czje;
+	private Double fyhj;
 	private String sfsz;
-	private Date szrq;
 	private String bz;
 	private Double fy1;
 	private Double fy2;
@@ -65,35 +72,42 @@ public class Housefy implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Housefy(String housefyid, String houseid, String fwmc, String zhxm,
-			Date rq1, Date rq2, Integer dscds, Integer dbcds, Integer dgtds,
-			Double ddj, Integer sscds, Integer sbcds, Integer sgtds,
-			Double sdj, Integer wlf, Integer glf, Integer ljf, Double syjzf,
-			Double qtf, Integer czje, String sfsz, Date szrq, String bz,
-			Double fy1, Double fy2, Double fy3, Double fy4, Double fy5,
-			String by1, String by2, String by3, String by4, String by5) {
+	public Housefy(String housefyid, String houseid, Date szrq, String fwmc,
+			String zhxm, Date rq1, Date rq2, Integer czje, Integer dscds,
+			Integer dbcds, Integer dsyds, Integer dgtds, Double ddj,
+			Double dfhj, Integer sscds, Integer sbcds, Integer ssyds,
+			Integer sgtds, Double sdj, Double sfhj, Integer wlf, Integer glf,
+			Integer ljf, Double syjzf, Double qtf, Double fyhj, String sfsz,
+			String bz, Double fy1, Double fy2, Double fy3, Double fy4,
+			Double fy5, String by1, String by2, String by3, String by4,
+			String by5) {
 		this.housefyid = housefyid;
 		this.houseid = houseid;
+		this.szrq = szrq;
 		this.fwmc = fwmc;
 		this.zhxm = zhxm;
 		this.rq1 = rq1;
 		this.rq2 = rq2;
+		this.czje = czje;
 		this.dscds = dscds;
 		this.dbcds = dbcds;
+		this.dsyds = dsyds;
 		this.dgtds = dgtds;
 		this.ddj = ddj;
+		this.dfhj = dfhj;
 		this.sscds = sscds;
 		this.sbcds = sbcds;
+		this.ssyds = ssyds;
 		this.sgtds = sgtds;
 		this.sdj = sdj;
+		this.sfhj = sfhj;
 		this.wlf = wlf;
 		this.glf = glf;
 		this.ljf = ljf;
 		this.syjzf = syjzf;
 		this.qtf = qtf;
-		this.czje = czje;
+		this.fyhj = fyhj;
 		this.sfsz = sfsz;
-		this.szrq = szrq;
 		this.bz = bz;
 		this.fy1 = fy1;
 		this.fy2 = fy2;
@@ -125,6 +139,16 @@ public class Housefy implements java.io.Serializable {
 
 	public void setHouseid(String houseid) {
 		this.houseid = houseid;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "szrq", length = 10)
+	public Date getSzrq() {
+		return this.szrq;
+	}
+
+	public void setSzrq(Date szrq) {
+		this.szrq = szrq;
 	}
 
 	@Column(name = "fwmc", nullable = false, length = 20)
@@ -165,6 +189,15 @@ public class Housefy implements java.io.Serializable {
 		this.rq2 = rq2;
 	}
 
+	@Column(name = "czje")
+	public Integer getCzje() {
+		return this.czje;
+	}
+
+	public void setCzje(Integer czje) {
+		this.czje = czje;
+	}
+
 	@Column(name = "dscds")
 	public Integer getDscds() {
 		return this.dscds;
@@ -181,6 +214,15 @@ public class Housefy implements java.io.Serializable {
 
 	public void setDbcds(Integer dbcds) {
 		this.dbcds = dbcds;
+	}
+
+	@Column(name = "dsyds")
+	public Integer getDsyds() {
+		return this.dsyds;
+	}
+
+	public void setDsyds(Integer dsyds) {
+		this.dsyds = dsyds;
 	}
 
 	@Column(name = "dgtds")
@@ -201,6 +243,15 @@ public class Housefy implements java.io.Serializable {
 		this.ddj = ddj;
 	}
 
+	@Column(name = "dfhj", precision = 10)
+	public Double getDfhj() {
+		return this.dfhj;
+	}
+
+	public void setDfhj(Double dfhj) {
+		this.dfhj = dfhj;
+	}
+
 	@Column(name = "sscds")
 	public Integer getSscds() {
 		return this.sscds;
@@ -219,6 +270,15 @@ public class Housefy implements java.io.Serializable {
 		this.sbcds = sbcds;
 	}
 
+	@Column(name = "ssyds")
+	public Integer getSsyds() {
+		return this.ssyds;
+	}
+
+	public void setSsyds(Integer ssyds) {
+		this.ssyds = ssyds;
+	}
+
 	@Column(name = "sgtds")
 	public Integer getSgtds() {
 		return this.sgtds;
@@ -235,6 +295,15 @@ public class Housefy implements java.io.Serializable {
 
 	public void setSdj(Double sdj) {
 		this.sdj = sdj;
+	}
+
+	@Column(name = "sfhj", precision = 10)
+	public Double getSfhj() {
+		return this.sfhj;
+	}
+
+	public void setSfhj(Double sfhj) {
+		this.sfhj = sfhj;
 	}
 
 	@Column(name = "wlf")
@@ -282,13 +351,13 @@ public class Housefy implements java.io.Serializable {
 		this.qtf = qtf;
 	}
 
-	@Column(name = "czje")
-	public Integer getCzje() {
-		return this.czje;
+	@Column(name = "fyhj", precision = 10)
+	public Double getFyhj() {
+		return this.fyhj;
 	}
 
-	public void setCzje(Integer czje) {
-		this.czje = czje;
+	public void setFyhj(Double fyhj) {
+		this.fyhj = fyhj;
 	}
 
 	@Column(name = "sfsz", length = 1)
@@ -298,16 +367,6 @@ public class Housefy implements java.io.Serializable {
 
 	public void setSfsz(String sfsz) {
 		this.sfsz = sfsz;
-	}
-
-	@Temporal(TemporalType.DATE)
-	@Column(name = "szrq", length = 10)
-	public Date getSzrq() {
-		return this.szrq;
-	}
-
-	public void setSzrq(Date szrq) {
-		this.szrq = szrq;
 	}
 
 	@Column(name = "bz", length = 500)

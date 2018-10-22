@@ -1,5 +1,6 @@
 package com.lj.czwgl.domain;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -55,6 +56,10 @@ public class House implements java.io.Serializable {
 	private String by3;
 	private String by4;
 	private String by5;
+	private String lrr;
+	private Timestamp lrsj;
+	private String zhxgr;
+	private Timestamp zhxgsj;
 
 	// Constructors
 
@@ -77,7 +82,8 @@ public class House implements java.io.Serializable {
 			Double sdj, Integer wlf, Integer glf, Integer ljf, Double syjzf,
 			Double qtf, String sfsz, String bz, Double fy1, Double fy2,
 			Double fy3, Double fy4, Double fy5, String by1, String by2,
-			String by3, String by4, String by5) {
+			String by3, String by4, String by5, String lrr, Timestamp lrsj,
+			String zhxgr, Timestamp zhxgsj) {
 		this.houseid = houseid;
 		this.yzhid = yzhid;
 		this.fwmc = fwmc;
@@ -114,6 +120,10 @@ public class House implements java.io.Serializable {
 		this.by3 = by3;
 		this.by4 = by4;
 		this.by5 = by5;
+		this.lrr = lrr;
+		this.lrsj = lrsj;
+		this.zhxgr = zhxgr;
+		this.zhxgsj = zhxgsj;
 	}
 
 	// Property accessors
@@ -443,6 +453,42 @@ public class House implements java.io.Serializable {
 
 	public void setBy5(String by5) {
 		this.by5 = by5;
+	}
+
+	@Column(name = "lrr", length = 20)
+	public String getLrr() {
+		return this.lrr;
+	}
+
+	public void setLrr(String lrr) {
+		this.lrr = lrr;
+	}
+
+	@Column(name = "lrsj", length = 26)
+	public Timestamp getLrsj() {
+		return this.lrsj;
+	}
+
+	public void setLrsj(Timestamp lrsj) {
+		this.lrsj = lrsj;
+	}
+
+	@Column(name = "zhxgr", length = 20)
+	public String getZhxgr() {
+		return this.zhxgr;
+	}
+
+	public void setZhxgr(String zhxgr) {
+		this.zhxgr = zhxgr;
+	}
+
+	@Column(name = "zhxgsj", length = 26)
+	public Timestamp getZhxgsj() {
+		return this.zhxgsj;
+	}
+
+	public void setZhxgsj(Timestamp zhxgsj) {
+		this.zhxgsj = zhxgsj;
 	}
 
 }
