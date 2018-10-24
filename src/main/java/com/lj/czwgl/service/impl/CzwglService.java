@@ -45,8 +45,8 @@ public class CzwglService implements ICzwglService {
 
 	@Override
 	public List<House> querySdbList(String yzhid) throws Exception {
-		Iterable<House> iter = houseRepository
-				.findByYzhidAndSfszAndZhxmNotNullOrderByFwmc(yzhid, "1");
+		Date date = Utils.relativeDate(new Date(), Calendar.DAY_OF_MONTH, 4);
+		Iterable<House> iter = houseRepository.findSdbList(yzhid,date);
 		return Utils.convertIterToList(iter);
 	}
 
@@ -94,6 +94,9 @@ public class CzwglService implements ICzwglService {
 				// 结转房屋数据
 				housefyRepository.save(newHousefy);
 				house.setSfsz("0"); // 设置房屋为未收租
+				house.setRq1(newHousefy.getRq1());
+				house.setRq2(newHousefy.getRq2());
+				house.setFyhj(newHousefy.getFyhj());
 				houseRepository.save(house);
 			} catch (Exception e) {
 				throw new RuntimeException(e);

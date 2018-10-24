@@ -55,9 +55,10 @@ public class CzwglController {
 				house.setHouseid(id);
 				house.setYzhid(yzhid);
 				house.setSfsz("1"); // 初始签约设置为已收租状态
-				czwglService.saveFy(house);
+				house = czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_EDITFY) {
-				czwglService.saveFy(house);
+//				house.setZhxgsj(zhxgsj);
+				house = czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_DELETEFY) {
 				czwglService.deleteFy(house);
 			}

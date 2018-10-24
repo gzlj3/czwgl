@@ -1,5 +1,7 @@
 package com.lj.czwgl.repository;
 
+import java.util.Date;
+
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -7,7 +9,9 @@ import org.springframework.data.repository.CrudRepository;
 import com.lj.czwgl.domain.House;
 
 public interface HouseRepository extends CrudRepository<House, String> {
-	Iterable<House> findByYzhidAndSfszAndZhxmNotNullOrderByFwmc(String yzhid,String sfsz);
+	@Modifying
+	@Query("select u from House u where u.yzhid=?1 and sfsz='1' and u.szrq<=?2 order by u.fwmc")
+	Iterable<House> findSdbList(String yzhid,Date date);
 
 	Iterable<House> findByYzhidOrderByFwmc(String yzhid);
 	

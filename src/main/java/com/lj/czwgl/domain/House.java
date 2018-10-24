@@ -46,6 +46,9 @@ public class House implements java.io.Serializable {
 	private Double qtf;
 	private String sfsz;
 	private String bz;
+	private Date rq1;
+	private Date rq2;
+	private Double fyhj;
 	private Double fy1;
 	private Double fy2;
 	private Double fy3;
@@ -80,10 +83,11 @@ public class House implements java.io.Serializable {
 			Date htrqz, Date szrq, Integer dscds, Integer dbcds, Integer dgtds,
 			Double ddj, Integer sscds, Integer sbcds, Integer sgtds,
 			Double sdj, Integer wlf, Integer glf, Integer ljf, Double syjzf,
-			Double qtf, String sfsz, String bz, Double fy1, Double fy2,
-			Double fy3, Double fy4, Double fy5, String by1, String by2,
-			String by3, String by4, String by5, String lrr, Timestamp lrsj,
-			String zhxgr, Timestamp zhxgsj) {
+			Double qtf, String sfsz, String bz, Date rq1, Date rq2,
+			Double fyhj, Double fy1, Double fy2, Double fy3, Double fy4,
+			Double fy5, String by1, String by2, String by3, String by4,
+			String by5, String lrr, Timestamp lrsj, String zhxgr,
+			Timestamp zhxgsj) {
 		this.houseid = houseid;
 		this.yzhid = yzhid;
 		this.fwmc = fwmc;
@@ -110,6 +114,9 @@ public class House implements java.io.Serializable {
 		this.qtf = qtf;
 		this.sfsz = sfsz;
 		this.bz = bz;
+		this.rq1 = rq1;
+		this.rq2 = rq2;
+		this.fyhj = fyhj;
 		this.fy1 = fy1;
 		this.fy2 = fy2;
 		this.fy3 = fy3;
@@ -363,6 +370,35 @@ public class House implements java.io.Serializable {
 
 	public void setBz(String bz) {
 		this.bz = bz;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "rq1", length = 10)
+	public Date getRq1() {
+		return this.rq1;
+	}
+
+	public void setRq1(Date rq1) {
+		this.rq1 = rq1;
+	}
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "rq2", length = 10)
+	public Date getRq2() {
+		return this.rq2;
+	}
+
+	public void setRq2(Date rq2) {
+		this.rq2 = rq2;
+	}
+
+	@Column(name = "fyhj", precision = 10)
+	public Double getFyhj() {
+		return this.fyhj;
+	}
+
+	public void setFyhj(Double fyhj) {
+		this.fyhj = fyhj;
 	}
 
 	@Column(name = "fy1", precision = 10)
