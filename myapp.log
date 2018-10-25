@@ -1,0 +1,103 @@
+2018-10-25 17:08:22.301  INFO 3184 --- [restartedMain] com.lj.czwgl.CzwglApplication            : Starting CzwglApplication on LIUJUN-PC1 with PID 3184 (D:\Workspaces3\czwgl\target\classes started by liujun in D:\Workspaces3\czwgl)
+2018-10-25 17:08:22.304  INFO 3184 --- [restartedMain] com.lj.czwgl.CzwglApplication            : No active profile set, falling back to default profiles: default
+2018-10-25 17:08:22.436  INFO 3184 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e91b83b: startup date [Thu Oct 25 17:08:22 CST 2018]; root of context hierarchy
+2018-10-25 17:08:25.781  INFO 3184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$941772df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-25 17:08:26.101  WARN 3184 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.tomcat.uri-encoding' to java.nio.charset.Charset
+2018-10-25 17:08:26.121  INFO 3184 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-10-25 17:08:26.125 ERROR 3184 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.tomcat.uri-encoding' to java.nio.charset.Charset:
+
+    Property: server.tomcat.uri-encoding
+    Value: UTF-8  
+    Origin: class path resource [application.properties]:14:28
+    Reason: failed to convert java.lang.String to java.nio.charset.Charset
+
+Action:
+
+Update your application's configuration
+
+2018-10-25 17:08:54.264  INFO 39956 --- [restartedMain] com.lj.czwgl.CzwglApplication            : Starting CzwglApplication on LIUJUN-PC1 with PID 39956 (D:\Workspaces3\czwgl\target\classes started by liujun in D:\Workspaces3\czwgl)
+2018-10-25 17:08:54.267  INFO 39956 --- [restartedMain] com.lj.czwgl.CzwglApplication            : No active profile set, falling back to default profiles: default
+2018-10-25 17:08:54.384  INFO 39956 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6e91b83b: startup date [Thu Oct 25 17:08:54 CST 2018]; root of context hierarchy
+2018-10-25 17:08:57.270  INFO 39956 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8796baf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-25 17:08:57.585  WARN 39956 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'servletWebServerFactoryCustomizer' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryAutoConfiguration.class]: Unsatisfied dependency expressed through method 'servletWebServerFactoryCustomizer' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'server-org.springframework.boot.autoconfigure.web.ServerProperties': Could not bind properties to 'ServerProperties' : prefix=server, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'server.tomcat.uri-encoding' to java.nio.charset.Charset
+2018-10-25 17:08:57.608  INFO 39956 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-10-25 17:08:57.612 ERROR 39956 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'server.tomcat.uri-encoding' to java.nio.charset.Charset:
+
+    Property: server.tomcat.uri-encoding
+    Value: UTF-8  
+    Origin: class path resource [application.properties]:14:28
+    Reason: failed to convert java.lang.String to java.nio.charset.Charset
+
+Action:
+
+Update your application's configuration
+
+2018-10-25 17:09:35.971  INFO 37964 --- [restartedMain] com.lj.czwgl.CzwglApplication            : Starting CzwglApplication on LIUJUN-PC1 with PID 37964 (D:\Workspaces3\czwgl\target\classes started by liujun in D:\Workspaces3\czwgl)
+2018-10-25 17:09:35.973  INFO 37964 --- [restartedMain] com.lj.czwgl.CzwglApplication            : No active profile set, falling back to default profiles: default
+2018-10-25 17:09:36.079  INFO 37964 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8fa639a: startup date [Thu Oct 25 17:09:36 CST 2018]; root of context hierarchy
+2018-10-25 17:09:39.108  INFO 37964 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5f43f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-25 17:09:39.954  INFO 37964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2018-10-25 17:09:39.998  INFO 37964 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-10-25 17:09:39.998  INFO 37964 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-10-25 17:09:40.027  INFO 37964 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_07\bin;C:\Program Files (x86)\Sybase\SQL Anywhere 7\win32;C:\Program Files (x86)\Sybase\Shared\Sybase Central 4.0\java;C:\Program Files (x86)\Sybase\Shared\Web Targets;C:\Program Files (x86)\Sybase\Shared\PowerBuilder;C:\Program Files (x86)\Sybase\SQL Anywhere 8\win32;C:\Program Files (x86)\Sybase\Shared\win32;C:\Program Files (x86)\Sybase\Shared\Sybase Central 4.1;C:\Program Files\TortoiseSVN\bin;C:\Program Files\MIT\Kerberos\bin;F:\HashiCorp\Vagrant\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;D:\application\housemgr\;C:\Program Files (x86)\Sybase\Shared\PowerBuilder\;C:\Users\liujun\AppData\Roaming\npm;f:\Programs\Microsoft VS Code\bin;.]
+2018-10-25 17:09:40.254  INFO 37964 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-10-25 17:09:40.255  INFO 37964 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4176 ms
+2018-10-25 17:09:40.426  INFO 37964 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-10-25 17:09:40.432  INFO 37964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-25 17:09:40.433  INFO 37964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-25 17:09:40.434  INFO 37964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-25 17:09:40.434  INFO 37964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-25 17:09:40.899  INFO 37964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-10-25 17:09:41.211  INFO 37964 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-10-25 17:09:41.341  INFO 37964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-10-25 17:09:41.381  INFO 37964 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-10-25 17:09:41.618  INFO 37964 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.17.Final}
+2018-10-25 17:09:41.621  INFO 37964 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-10-25 17:09:41.710  INFO 37964 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-10-25 17:09:41.984  INFO 37964 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-10-25 17:09:44.094  INFO 37964 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-10-25 17:09:44.874  INFO 37964 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-10-25 17:09:45.563  INFO 37964 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-25 17:09:46.019  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@8fa639a: startup date [Thu Oct 25 17:09:36 CST 2018]; root of context hierarchy
+2018-10-25 17:09:46.102  WARN 37964 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-10-25 17:09:46.191  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/fygl_list],methods=[GET]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.getFyglList()
+2018-10-25 17:09:46.193  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/fygl_list/{action}],methods=[POST]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.postFyglList(short,com.lj.czwgl.domain.House)
+2018-10-25 17:09:46.194  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/sdb_list],methods=[GET]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.getSdbList()
+2018-10-25 17:09:46.195  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/sdb_list],methods=[POST]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.postSdbList(com.lj.czwgl.domain.HouseDto)
+2018-10-25 17:09:46.196  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/zd_list],methods=[GET]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.getZdList()
+2018-10-25 17:09:46.197  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/zd_list],methods=[POST]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.postZdList(com.lj.czwgl.domain.HouseDto)
+2018-10-25 17:09:46.198  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/lastzd],methods=[GET]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.Housefy> com.lj.czwgl.controller.CzwglController.getLastZdList(java.lang.String)
+2018-10-25 17:09:46.199  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/fygl/handlezd],methods=[GET]}" onto public com.lj.czwgl.common.Results<com.lj.czwgl.domain.House> com.lj.czwgl.controller.CzwglController.handleZd(java.lang.String)
+2018-10-25 17:09:46.207  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-25 17:09:46.209  INFO 37964 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-25 17:09:46.349  INFO 37964 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-25 17:09:46.350  INFO 37964 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-25 17:09:46.473  INFO 37964 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: ServletContext resource [/index.html]
+2018-10-25 17:09:46.913  INFO 37964 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-10-25 17:09:46.973  INFO 37964 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-25 17:09:46.985  INFO 37964 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-10-25 17:09:47.001  INFO 37964 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-10-25 17:09:47.094  INFO 37964 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2018-10-25 17:09:47.100  INFO 37964 --- [restartedMain] com.lj.czwgl.CzwglApplication            : Started CzwglApplication in 11.851 seconds (JVM running for 12.785)
