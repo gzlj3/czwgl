@@ -85,7 +85,7 @@ public class CzwglService implements ICzwglService {
 		iter.forEach(house -> {
 			Housefy housefy = housefyRepository
 					.findFirstByHouseidOrderByRq1Desc(house.getHouseid());
-			if (housefy != null && !"1".equals(housefy.getSfsz()))
+			if (housefy != null && "0".equals(housefy.getSfsz()))
 				throw new RuntimeException("有帐单未结清(" + housefy.getFwmc()
 						+ ")，生成新帐单失败！");
 			try {
@@ -110,20 +110,20 @@ public class CzwglService implements ICzwglService {
 	}
 
 	@Override
-	public void processQrsz(String housefyid) throws Exception {
+	public void processQrsz(String housefyid,String flag) throws Exception {
 		Optional<Housefy> housefyOpt = housefyRepository.findById(housefyid);
 		if (!housefyOpt.isPresent())
 			throw new Exception("房源费用ID不存在：" + housefyid);
 		Housefy housefy = housefyOpt.get();
 		House house = houseRepository.findById(housefy.getHouseid()).get();
 
-		jzHouse(house, housefy);
+		jzHouse(house, housefy,flag);
 
 		housefyRepository.save(housefy);
 		houseRepository.save(house);
 	}
 
-	private void jzHouse(House house, Housefy housefy) throws Exception {
+	private void jzHouse(House house, Housefy housefy,String flag) throws Exception {
 		// 更新房源上次收租日期
 		house.setSzrq(housefy.getSzrq());
 		// 更新房源结转数据
@@ -131,9 +131,15 @@ public class CzwglService implements ICzwglService {
 		house.setSscds(housefy.getSbcds());
 		house.setDbcds(null);
 		house.setSbcds(null);
-		// 是否收租
-		house.setSfsz("1");
-		housefy.setSfsz("1");
+		if("jzzd".equals(flag)){
+			house.setSyjzf(housefy.getFyhj());
+			house.setSfsz("2");
+			housefy.setSfsz("2");
+		}else{
+			house.setSyjzf(null);
+			house.setSfsz("1");
+			housefy.setSfsz("1");
+		}
 	}
 
 	private Housefy createhousefy(House house) throws Exception {

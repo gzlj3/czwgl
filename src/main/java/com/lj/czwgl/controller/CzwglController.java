@@ -145,9 +145,9 @@ public class CzwglController {
 	}
 
 	@GetMapping(path = "/handlezd")
-	public Results<House> handleZd(@RequestParam String housefyid) {
+	public Results<House> handleZd(@RequestParam String housefyid,@RequestParam String flag) {
 		try {
-			czwglService.processQrsz(housefyid);
+			czwglService.processQrsz(housefyid,flag);
 			return this.getFyglList();
 		} catch (Exception e) {
 			e.printStackTrace();

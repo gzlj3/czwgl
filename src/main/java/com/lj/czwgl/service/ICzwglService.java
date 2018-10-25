@@ -24,6 +24,6 @@ public interface ICzwglService {
 
 	public void updateZdList(HouseDto houseDto) throws Exception;
 	
-	public void processQrsz(String housefyid) throws Exception;
+	public void processQrsz(String housefyid,String flag) throws Exception;
 
 }
