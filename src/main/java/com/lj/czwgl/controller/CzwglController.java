@@ -1,5 +1,6 @@
 package com.lj.czwgl.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import com.lj.czwgl.common.Results;
 import com.lj.czwgl.domain.House;
 import com.lj.czwgl.domain.HouseDto;
 import com.lj.czwgl.domain.Housefy;
+import com.lj.czwgl.domain.Userb;
 import com.lj.czwgl.service.ICzwglService;
 import com.lj.czwgl.utils.Utils;
 
@@ -26,7 +28,8 @@ import com.lj.czwgl.utils.Utils;
 @SuppressWarnings("unchecked")
 public class CzwglController {
 
-	private final String yzhid = "1";
+	private final Userb curUser = new Userb("1", "admin", "管理员", "1");
+	// private final String yzhid = "1";
 
 	@Autowired
 	private ICzwglService czwglService;
@@ -34,7 +37,7 @@ public class CzwglController {
 	@GetMapping(path = "/fygl_list")
 	public Results<House> getFyglList() {
 		try {
-			List<House> result = czwglService.queryFyList(yzhid);
+			List<House> result = czwglService.queryFyList(curUser.getYzhid());
 			Results<House> successResults = (Results<House>) Results
 					.getSuccessResults(result);
 			return successResults;
@@ -53,11 +56,15 @@ public class CzwglController {
 			if (action == Constants.BUTTON_ADDFY) {
 				String id = Utils.getUUID32();
 				house.setHouseid(id);
-				house.setYzhid(yzhid);
-				house.setSfsz("1"); // 初始签约设置为已收租状态
+				house.setYzhid(curUser.getYzhid());
+				house.setLrr(curUser.getUserid());
+				house.setLrsj(Utils.getCurrentTimestamp());
+				house.setZhxgr(curUser.getUserid());
+				house.setZhxgsj(house.getLrsj());
 				house = czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_EDITFY) {
-//				house.setZhxgsj(zhxgsj);
+				house.setZhxgr(curUser.getUserid());
+				house.setZhxgsj(Utils.getCurrentTimestamp());
 				house = czwglService.saveFy(house);
 			} else if (action == Constants.BUTTON_DELETEFY) {
 				czwglService.deleteFy(house);
@@ -76,7 +83,7 @@ public class CzwglController {
 	@GetMapping(path = "/sdb_list")
 	public Results<House> getSdbList() {
 		try {
-			List<House> result = czwglService.querySdbList(yzhid);
+			List<House> result = czwglService.querySdbList(curUser.getYzhid());
 			Results<House> successResults = (Results<House>) Results
 					.getSuccessResults(result);
 			return successResults;
@@ -104,7 +111,7 @@ public class CzwglController {
 	@GetMapping(path = "/zd_list")
 	public Results<House> getZdList() {
 		try {
-			HouseDto result = czwglService.queryZdList(yzhid);
+			HouseDto result = czwglService.queryZdList(curUser.getYzhid());
 			Results<House> successResults = (Results<House>) Results
 					.getSuccessResults(result);
 			return successResults;
@@ -145,9 +152,10 @@ public class CzwglController {
 	}
 
 	@GetMapping(path = "/handlezd")
-	public Results<House> handleZd(@RequestParam String housefyid,@RequestParam String flag) {
+	public Results<House> handleZd(@RequestParam String housefyid,
+			@RequestParam String flag) {
 		try {
-			czwglService.processQrsz(housefyid,flag);
+			czwglService.processQrsz(housefyid, flag, curUser);
 			return this.getFyglList();
 		} catch (Exception e) {
 			e.printStackTrace();

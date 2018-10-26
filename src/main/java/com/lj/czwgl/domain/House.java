@@ -44,11 +44,13 @@ public class House implements java.io.Serializable {
 	private Integer ljf;
 	private Double syjzf;
 	private Double qtf;
-	private String sfsz;
 	private String bz;
 	private Date rq1;
 	private Date rq2;
 	private Double fyhj;
+	private String zdlx;
+	private String sfsz;
+	private String housefyid;
 	private Double fy1;
 	private Double fy2;
 	private Double fy3;
@@ -83,11 +85,11 @@ public class House implements java.io.Serializable {
 			Date htrqz, Date szrq, Integer dscds, Integer dbcds, Integer dgtds,
 			Double ddj, Integer sscds, Integer sbcds, Integer sgtds,
 			Double sdj, Integer wlf, Integer glf, Integer ljf, Double syjzf,
-			Double qtf, String sfsz, String bz, Date rq1, Date rq2,
-			Double fyhj, Double fy1, Double fy2, Double fy3, Double fy4,
-			Double fy5, String by1, String by2, String by3, String by4,
-			String by5, String lrr, Timestamp lrsj, String zhxgr,
-			Timestamp zhxgsj) {
+			Double qtf, String bz, Date rq1, Date rq2, Double fyhj,
+			String zdlx, String sfsz, String housefyid, Double fy1, Double fy2,
+			Double fy3, Double fy4, Double fy5, String by1, String by2,
+			String by3, String by4, String by5, String lrr, Timestamp lrsj,
+			String zhxgr, Timestamp zhxgsj) {
 		this.houseid = houseid;
 		this.yzhid = yzhid;
 		this.fwmc = fwmc;
@@ -112,11 +114,13 @@ public class House implements java.io.Serializable {
 		this.ljf = ljf;
 		this.syjzf = syjzf;
 		this.qtf = qtf;
-		this.sfsz = sfsz;
 		this.bz = bz;
 		this.rq1 = rq1;
 		this.rq2 = rq2;
 		this.fyhj = fyhj;
+		this.zdlx = zdlx;
+		this.sfsz = sfsz;
+		this.housefyid = housefyid;
 		this.fy1 = fy1;
 		this.fy2 = fy2;
 		this.fy3 = fy3;
@@ -354,15 +358,6 @@ public class House implements java.io.Serializable {
 		this.qtf = qtf;
 	}
 
-	@Column(name = "sfsz", length = 1)
-	public String getSfsz() {
-		return this.sfsz;
-	}
-
-	public void setSfsz(String sfsz) {
-		this.sfsz = sfsz;
-	}
-
 	@Column(name = "bz", length = 500)
 	public String getBz() {
 		return this.bz;
@@ -399,6 +394,33 @@ public class House implements java.io.Serializable {
 
 	public void setFyhj(Double fyhj) {
 		this.fyhj = fyhj;
+	}
+
+	@Column(name = "zdlx", length = 1)
+	public String getZdlx() {
+		return this.zdlx;
+	}
+
+	public void setZdlx(String zdlx) {
+		this.zdlx = zdlx;
+	}
+
+	@Column(name = "sfsz", length = 1)
+	public String getSfsz() {
+		return this.sfsz;
+	}
+
+	public void setSfsz(String sfsz) {
+		this.sfsz = sfsz;
+	}
+
+	@Column(name = "housefyid", length = 32)
+	public String getHousefyid() {
+		return this.housefyid;
+	}
+
+	public void setHousefyid(String housefyid) {
+		this.housefyid = housefyid;
 	}
 
 	@Column(name = "fy1", precision = 10)

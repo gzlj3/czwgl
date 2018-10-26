@@ -5,6 +5,7 @@ import java.util.List;
 import com.lj.czwgl.domain.House;
 import com.lj.czwgl.domain.HouseDto;
 import com.lj.czwgl.domain.Housefy;
+import com.lj.czwgl.domain.Userb;
 
 public interface ICzwglService {
 
@@ -23,7 +24,8 @@ public interface ICzwglService {
 	public void updateSdbList(HouseDto houseDto) throws Exception;
 
 	public void updateZdList(HouseDto houseDto) throws Exception;
-	
-	public void processQrsz(String housefyid,String flag) throws Exception;
+
+	public void processQrsz(String housefyid, String flag, Userb curUser)
+			throws Exception;
 
 }

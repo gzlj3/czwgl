@@ -3,5 +3,6 @@
 	<persistence-unit name="czwgl" transaction-type="RESOURCE_LOCAL">
 		<class>com.lj.czwgl.domain.Housefy</class>
 		<class>com.lj.czwgl.domain.House</class>
+		<class>com.lj.czwgl.domain.Userb</class>
 	</persistence-unit>
 </persistence>

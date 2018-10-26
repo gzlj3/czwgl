@@ -19,7 +19,9 @@ public class Test {
 //		Date dt = Utils.localDateToDate(lddt);
 //		System.out.println(dt);
 //		new Date()
-		System.out.println(Utils.relativeDate(new Date(), Calendar.MONTH, 1));
+		Integer a = new Integer(500);
+		int days = 31;
+		System.out.println(Math.round((new Double(a) / 30) * days));
 	}
 	
 	private  static String subMonth(String date) throws Exception {  

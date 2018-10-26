@@ -12,4 +12,10 @@ public class Constants {
 	public static short BUTTON_DELETEFY = 3; // 删除房源
 	public static short BUTTON_CB = 4; // 抄表
 	public static short BUTTON_LASTZD = 5; // 查看/处理最近帐单
+	
+	// 帐单类型
+	public static String ZDLX_HTZD = "0";  //合同帐单
+	public static String ZDLX_YJZD = "1";  //月结帐单
+	public static String ZDLX_TFZD = "2";  //退房帐单
+	
 }

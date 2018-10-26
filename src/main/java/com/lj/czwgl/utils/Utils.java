@@ -1,5 +1,6 @@
 package com.lj.czwgl.utils;
 
+import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,12 +10,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Consumer;
 
 public final class Utils {
 	public static String getUUID32() {
 		String uuid = UUID.randomUUID().toString().replace("-", "");
 		return uuid;
+	}
+
+	public static boolean empty(String s) {
+		return s == null || "".equals(s);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -36,8 +40,39 @@ public final class Utils {
 		return value == null ? new Double(0) : value;
 	}
 
+	public static Timestamp dateToTimestamp(Date rq) {
+		return new Timestamp(rq.getTime());
+	}
+
+	public static Timestamp getCurrentTimestamp() {
+		return new Timestamp(System.currentTimeMillis());
+	}
+
+	/**
+	 * 返回2个日期之间的天数，date2 - date1
+	 * 
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public static int daysBetween(Date date1, Date date2) {
+		int between_days = Math.round((date2.getTime() - date1.getTime())
+				/ (1000 * 3600 * 24));
+		return between_days;
+	}
+
+	/**
+	 * 返回指定日期的相对日期
+	 * 
+	 * @param date
+	 * @param field
+	 *            (Calendar.DAY_OF_MONTH等)
+	 * @param amount
+	 * @return
+	 */
 	public static Date relativeDate(Date date, int field, int amount) {
 		Calendar cd = Calendar.getInstance();
+
 		cd.setTime(date);
 		cd.add(field, amount);
 		return cd.getTime();
