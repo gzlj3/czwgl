@@ -1,29 +1,60 @@
 package test;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-import com.lj.czwgl.utils.Utils;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.lj.czwgl.utils.AccessToken;
+import com.lj.czwgl.utils.NetWorkHelper;
 
 public class Test {
 
 	public static void main(String[] args) throws Exception {
-//		LocalDate dt = LocalDate.of(2019, 3, 1);
-//		dt = dt.minusDays(1);
-//		LocalDate lddt = Utils.dateToLocalDate(new Date());
-//		System.out.println(lddt);
-//		Instant a = Instant.ofEpochMilli(new Date().getTime());
-//		Date dt = Utils.localDateToDate(lddt);
-//		System.out.println(dt);
-//		new Date()
-		Integer a = new Integer(500);
-		int days = 31;
-		System.out.println(Math.round((new Double(a) / 30) * days));
+//		AccessToken token = getAccessToken("wx5682b088ee6d92a4","3a5489c45254edc27f80f397a512d5ea");
+		AccessToken token = getAccessToken("wxa49564198a94c518","48491262cd07c6b0c104c0b687250d6c");
+		System.out.println(token.getAccessToken());
+//		String strtoken = "15_94vY__O2dADKgLkAd-LK1XY119WnCiuqYag1IGObaGWfP3Wc5-RRCt_DO2ulT3iB23hTN1M3leebPAgppvxF81yu_uZsBHmt_4TKQtR3-Tc8UCnaNUKCnUAjggpZpPal8dXYczZ6plUveiYUEPIfADANYR";
+		String strtoken = token.getAccessToken();
+		JSONObject jsonObj = new JSONObject();		
+		ArrayList list = new ArrayList();
+		list.add(new ButtonObj("view","进入极简出租","CZWGLXT","http://myk8m6.natappfree.cc"));
+		jsonObj.put("button", list);
+		String menuStr = jsonObj.toJSONString();
+		System.out.println(menuStr);
+
+        String Url = String.format("https://api.weixin.qq.com/cgi-bin/menu/create?access_token=%s",strtoken);
+        NetWorkHelper netHelper = new NetWorkHelper();
+		String result = netHelper.postHttps(Url, menuStr);
+        System.out.println(result);
 	}
-	
+	/**
+     * 获取access_token
+     *
+     * @return AccessToken
+     */
+    private static AccessToken getAccessToken(String appId, String appSecret) {
+        NetWorkHelper netHelper = new NetWorkHelper();
+        /**
+         * 接口地址为https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET，其中grant_type固定写为client_credential即可。
+         */
+        String Url = String.format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s", appId, appSecret);
+        //此请求为https的get请求，返回的数据格式为{"access_token":"ACCESS_TOKEN","expires_in":7200}
+        String result = netHelper.getHttpsResponse(Url, "");
+//        JSONObject jsonObj = JSONObject.parseObject(result);
+//        String token = (String)jsonObj.get("access_token");
+//        System.out.println(token);
+//        System.out.println("获取到的access_token="+result);
+        //使用FastJson将Json字符串解析成Json对象
+        JSONObject json = JSON.parseObject(result);
+        AccessToken token = new AccessToken();
+        token.setAccessToken(json.getString("access_token"));
+        token.setExpiresin(json.getInteger("expires_in"));
+        return token;
+    }
+    
 	private  static String subMonth(String date) throws Exception {  
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
         Date dt = sdf.parse(date);  

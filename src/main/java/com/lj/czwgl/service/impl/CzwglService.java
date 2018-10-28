@@ -242,6 +242,7 @@ public class CzwglService implements ICzwglService {
 			housefy.setWlf(house.getWlf());
 			housefy.setLjf(house.getLjf());
 			housefy.setSyjzf(house.getSyjzf());
+			housefy.setQtf(house.getQtf());
 
 			// 房屋合计费
 			housefy.setFyhj(Utils.getDouble(housefy.getDfhj())
