@@ -1,0 +1,22 @@
+[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
+[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 15:44:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 4f9d4713aafedc6adf62f01fcf2634de
+[2018/10/29 15:44:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://hczdnn.natappfree.cc
+[2018/10/29 15:58:38 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:6a337d08] Server failed to write StartProxy: EOF
+[2018/10/29 15:58:44 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3332b4dd] Joined with connection pxy:702a8cee
+[2018/10/29 15:58:44 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:3332b4dd] Error reading response from server: unexpected EOF
+[2018/10/29 15:59:11 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:94fe026] Joined with connection pxy:341b6016
+[2018/10/29 15:59:49 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1e2de10] Joined with connection pxy:e70f356
+[2018/10/29 16:09:40 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:71a70e42] Server failed to write StartProxy: EOF
+[2018/10/29 16:09:46 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:243c9418] Joined with connection pxy:36acf5eb
+[2018/10/29 16:09:46 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:243c9418] Error reading response from server: unexpected EOF
+[2018/10/29 16:09:46 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7455fb13] Joined with connection pxy:4c183062
+[2018/10/29 16:10:15 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:35b3f0a] Joined with connection pxy:71fbdcb
+[2018/10/29 16:10:20 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:35b3f0a] Error reading response from server: unexpected EOF
+[2018/10/29 16:10:20 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1469aba9] Joined with connection pxy:5702e77f
+[2018/10/29 16:10:25 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:1469aba9] Error reading response from server: unexpected EOF
+[2018/10/29 16:10:26 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2542a718] Joined with connection pxy:30f66ecc
+[2018/10/29 16:10:31 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:2542a718] Error reading response from server: unexpected EOF

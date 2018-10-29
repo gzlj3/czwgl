@@ -109,9 +109,11 @@ public class NetWorkHelper {
 			con.setUseCaches(false); // 不使用缓冲
 			con.setRequestMethod("POST"); // 使用POST请求
 			OutputStream os = con.getOutputStream();
-			OutputStreamWriter osw = new OutputStreamWriter(os);
-			osw.write(body);
-			osw.flush();
+			os.write(body.getBytes("utf-8"));
+			os.flush();
+//			OutputStreamWriter osw = new OutputStreamWriter(os);
+//			osw.write(body.getBytes());
+//			osw.flush();
 			
 			is = con.getInputStream(); // 获取输入流，此时才真正建立链接
 			InputStreamReader isr = new InputStreamReader(is);

@@ -10,6 +10,26 @@ public class AccessToken {
 	// 凭证有效时间，单位：秒
 	private int expiresin;
 
+	private String errcode;
+
+	private String errmsg;
+
+	public String getErrcode() {
+		return errcode;
+	}
+
+	public void setErrcode(String errcode) {
+		this.errcode = errcode;
+	}
+
+	public String getErrmsg() {
+		return errmsg;
+	}
+
+	public void setErrmsg(String errmsg) {
+		this.errmsg = errmsg;
+	}
+
 	public String getAccessToken() {
 		return accessToken;
 	}

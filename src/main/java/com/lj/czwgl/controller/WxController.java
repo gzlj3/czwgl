@@ -39,7 +39,7 @@ public class WxController {
 	private final String TOKEN = "gzlj";
 
 	@GetMapping(path = "")
-	public String getFyglList(@RequestParam String signature,
+	public String doGet(@RequestParam String signature,
 			@RequestParam String timestamp, @RequestParam String nonce,
 			@RequestParam String echostr) {
 		// 排序
