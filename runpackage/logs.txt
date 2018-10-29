@@ -1,22 +1,46 @@
-[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
-[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
-[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 15:44:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 15:44:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 4f9d4713aafedc6adf62f01fcf2634de
-[2018/10/29 15:44:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://hczdnn.natappfree.cc
-[2018/10/29 15:58:38 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:6a337d08] Server failed to write StartProxy: EOF
-[2018/10/29 15:58:44 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3332b4dd] Joined with connection pxy:702a8cee
-[2018/10/29 15:58:44 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:3332b4dd] Error reading response from server: unexpected EOF
-[2018/10/29 15:59:11 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:94fe026] Joined with connection pxy:341b6016
-[2018/10/29 15:59:49 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1e2de10] Joined with connection pxy:e70f356
-[2018/10/29 16:09:40 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:71a70e42] Server failed to write StartProxy: EOF
-[2018/10/29 16:09:46 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:243c9418] Joined with connection pxy:36acf5eb
-[2018/10/29 16:09:46 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:243c9418] Error reading response from server: unexpected EOF
-[2018/10/29 16:09:46 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7455fb13] Joined with connection pxy:4c183062
-[2018/10/29 16:10:15 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:35b3f0a] Joined with connection pxy:71fbdcb
-[2018/10/29 16:10:20 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:35b3f0a] Error reading response from server: unexpected EOF
-[2018/10/29 16:10:20 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1469aba9] Joined with connection pxy:5702e77f
-[2018/10/29 16:10:25 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:1469aba9] Error reading response from server: unexpected EOF
-[2018/10/29 16:10:26 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2542a718] Joined with connection pxy:30f66ecc
-[2018/10/29 16:10:31 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:2542a718] Error reading response from server: unexpected EOF
+[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
+[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 2232ae5c831347a78b0a1354dc785a61
+[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://c6paje.natappfree.cc
+[2018/10/29 19:27:09 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 19:40:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1d887b37] Joined with connection pxy:1ce8b9a6
+[2018/10/29 19:40:53 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14a4510d] Joined with connection pxy:45bf5ee3
+[2018/10/29 19:41:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:219f2469] Joined with connection pxy:1d6b1dd0
+[2018/10/29 19:41:18 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2779cda8] Joined with connection pxy:718f021e
+[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:6cf834ed] Joined with connection pxy:46d821c8
+[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:170e8507] Joined with connection pxy:12ace7b3
+[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:25f6e708] Joined with connection pxy:728bce28
+[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1ecbac79] Joined with connection pxy:708a7e88
+[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4bc3e54e] Joined with connection pxy:450b1595
+[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2f5a24f4] Joined with connection pxy:45f0f9ae
+[2018/10/29 19:44:43 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:645ec675] Joined with connection pxy:6f03f80d
+[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:41b1835c] Joined with connection pxy:6e2c1f56
+[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3c2d7fd4] Joined with connection pxy:2ba0a9cb
+[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:26b0ae09] Joined with connection pxy:1ddf4c90
+[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:4680d604] Server failed to write StartProxy: EOF
+[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:5ae7e1c6] Server failed to write StartProxy: EOF
+[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:38af1995] Server failed to write StartProxy: EOF
+[2018/10/29 19:46:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1c49ed5f] Joined with connection pxy:42b50b39
+[2018/10/29 19:47:00 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:343a1ee] Joined with connection pxy:57e02083
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/29 21:27:01 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4f64fc69] Joined with connection pxy:6af63fd3
+[2018/10/29 21:27:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2333879d] Joined with connection pxy:79eea043
+[2018/10/29 21:31:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3fe4051a] Joined with connection pxy:67f48fe8
+[2018/10/29 21:31:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14d0e036] Joined with connection pxy:73c6cb6e
+[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:78fc06b9] Joined with connection pxy:600eeb40
+[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:22801932] Joined with connection pxy:714bce19
+[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1025b6a6] Joined with connection pxy:5702346a
+[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:649d63d4] Joined with connection pxy:521bc0b8
+[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:471905ce] Joined with connection pxy:5fc1f695
+[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7b874b10] Joined with connection pxy:10974f93

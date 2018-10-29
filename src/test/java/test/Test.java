@@ -22,57 +22,67 @@ public class Test {
 		// AccessToken token =
 		// getAccessToken("wxa49564198a94c518","48491262cd07c6b0c104c0b687250d6c");
 		// System.out.println(token.getAccessToken());
-		String strtoken = "15_NK87N2a_M7yBi0lUy2sPrH1IlN7zgXRVu_SNX1dc6gXkvEAZhOwnYIceCmXR9OjTuhB1AOghwEBjw_a-GjGNtZDgJc6pIUTNwCXDRt0oLyvbY8A5AdtpLn2I06A1wQ_V-DgeVlsSphJ3IZtTPBEcAIABNQ";
+		String strtoken = "15_nHnIMSDuqTfbrK4NNqPzMoGQOdZhEgd2Z9vaOkDWIkO3dce1i6p1TAzDj6d7pv9K63k7-rstLlxZMRaFxMBPY8ZBUraReSBFBxAlt0CEPd5y1yvGsnQMvi2QbiCbUKZaZX-7jBeul7G7DYriUSHaABADBQ";
 		NetWorkHelper netHelper = new NetWorkHelper();
-		//模板消息测试
-		//设置所属行业
+		// 模板消息测试
+		// 设置所属行业
+		// String url = String
+		// .format("https://api.weixin.qq.com/cgi-bin/template/api_set_industry?access_token=%s",
+		// strtoken);
+		// String body = "{\"industry_id1\":\"1\",\"industry_id2\":\"4\"}";
+		// String result = netHelper.postHttps(url, body);
+		// System.out.println(result);
+
+		// 获取所属行业
+		// String url = String
+		// .format("https://api.weixin.qq.com/cgi-bin/template/get_industry?access_token=%s",
+		// strtoken);
+		// String result = netHelper.getHttpsResponse(url, "");
+		// System.out.println(result);
+		// 获取模板列表
+		// String url = String
+		// .format("https://api.weixin.qq.com/cgi-bin/template/get_all_private_template?access_token=%s",
+		// strtoken);
+		// String result = netHelper.getHttpsResponse(url, "");
+		// System.out.println(result);
+		//
+		// //发送模板消息
+//		TemplateObj tmobj = new TemplateObj();
+//		JSONObject jsonObj = new JSONObject();
+//		jsonObj.put("template_id",
+//				"omtuiMD0-VxUMRkABVq6D-FQ8heRGbnlT7uw-HWMFX8");
+//		jsonObj.put("touser", "oLXPC0uDnrwiQ-GcwnRcQh4jTyiM");
+//		jsonObj.put("url", "http://c6paje.natappfree.cc");
+//		JSONObject dataObjs = new JSONObject();
+//		DataObj dataObj = new DataObj("测试参数", "red");
+//		dataObjs.put("para1", dataObj);
+//		jsonObj.put("data", dataObjs);
+//		System.out.println(jsonObj.toJSONString());
 //		String url = String
-//				.format("https://api.weixin.qq.com/cgi-bin/template/api_set_industry?access_token=%s",
+//				.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",
 //						strtoken);
-//		String body = "{\"industry_id1\":\"1\",\"industry_id2\":\"4\"}";
+//		String body = jsonObj.toJSONString();
 //		String result = netHelper.postHttps(url, body);
 //		System.out.println(result);
-		
-		//获取所属行业
-//		String url = String
-//				.format("https://api.weixin.qq.com/cgi-bin/template/get_industry?access_token=%s",
-//						strtoken);
-//		String result = netHelper.getHttpsResponse(url, "");
-//		System.out.println(result);
-		//获取模板列表
-		String url = String
-				.format("https://api.weixin.qq.com/cgi-bin/template/get_all_private_template?access_token=%s",
-						strtoken);
-		String result = netHelper.getHttpsResponse(url, "");
-		System.out.println(result);
 
-		//发送模板消息
-		TemplateObj tmobj = new TemplateObj();
-		 JSONObject jsonobj = new JSONObject();
-//		tmobj.put("","oLXPC0uDnrwiQ-GcwnRcQh4jTyiM");
-		tmobj.setTemplate_id("omtuiMD0-VxUMRkABVq6D-FQ8heRGbnlT7uw-HWMFX8");
-		tmobj.setUrl("http://hczdnn.natappfree.cc");
-		DataObj  dataObj = new DataObj("测试参数","#173177");
-		List datalist = new ArrayList();
-		datalist.add(dataObj);
-		tmobj.setData(datalist);
-		
-//		tmobj.
-		
-		// String strtoken = token.getAccessToken();
-		// JSONObject jsonObj = new JSONObject();
-		// ArrayList list = new ArrayList();
-		// list.add(new
-		// ButtonObj("view","进入极简出租","CZWGLXT","http://myk8m6.natappfree.cc"));
-		// jsonObj.put("button", list);
-		// String menuStr = jsonObj.toJSONString();
-		// System.out.println(menuStr);
-		//
-		// String Url =
-		// String.format("https://api.weixin.qq.com/cgi-bin/menu/create?access_token=%s",strtoken);
-		// NetWorkHelper netHelper = new NetWorkHelper();
-		// String result = netHelper.postHttps(Url, menuStr);
-		// System.out.println(result);
+		// 获取用户列表
+//		 String url = String
+//		 .format("https://api.weixin.qq.com/cgi-bin/user/get?access_token=%s",strtoken);
+//		 String result = netHelper.getHttpsResponse(url, "");
+//		 System.out.println(result);
+			// 获取用户基本信息
+//		 String url = String
+//		 .format("https://api.weixin.qq.com/cgi-bin/user/info?access_token=%s&openid=%s&lang=zh_CN",strtoken,"oLXPC0uDnrwiQ-GcwnRcQh4jTyiM");
+//		 String result = netHelper.getHttpsResponse(url, "");
+//		 System.out.println(result);
+		//生成二维码
+		 String url = String
+		 .format("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=%s",strtoken);
+		 String body = "{\"expire_seconds\":604800,\"action_name\":\"QR_SCENE\",\"action_info\":{\"scene\":{\"scene_id\":123}}}";
+		String result = netHelper.postHttps(url, body);
+		 System.out.println(result);
+//		 {"ticket":"https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEQ8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAycDlaN2d4SlBmMmkxUW8zdzFyMWEAAgSYCNdbAwSAOgkA","expire_seconds":604800,"url":"http:\/\/weixin.qq.com\/q\/02p9Z7gxJPf2i1Qo3w1r1a"}
+
 	}
 
 	/**
