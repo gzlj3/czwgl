@@ -1,46 +1,22 @@
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 2232ae5c831347a78b0a1354dc785a61
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://c6paje.natappfree.cc
-[2018/10/29 19:27:09 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 19:40:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1d887b37] Joined with connection pxy:1ce8b9a6
-[2018/10/29 19:40:53 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14a4510d] Joined with connection pxy:45bf5ee3
-[2018/10/29 19:41:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:219f2469] Joined with connection pxy:1d6b1dd0
-[2018/10/29 19:41:18 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2779cda8] Joined with connection pxy:718f021e
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:6cf834ed] Joined with connection pxy:46d821c8
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:170e8507] Joined with connection pxy:12ace7b3
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:25f6e708] Joined with connection pxy:728bce28
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1ecbac79] Joined with connection pxy:708a7e88
-[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4bc3e54e] Joined with connection pxy:450b1595
-[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2f5a24f4] Joined with connection pxy:45f0f9ae
-[2018/10/29 19:44:43 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:645ec675] Joined with connection pxy:6f03f80d
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:41b1835c] Joined with connection pxy:6e2c1f56
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3c2d7fd4] Joined with connection pxy:2ba0a9cb
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:26b0ae09] Joined with connection pxy:1ddf4c90
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:4680d604] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:5ae7e1c6] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:38af1995] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1c49ed5f] Joined with connection pxy:42b50b39
-[2018/10/29 19:47:00 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:343a1ee] Joined with connection pxy:57e02083
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 21:27:01 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4f64fc69] Joined with connection pxy:6af63fd3
-[2018/10/29 21:27:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2333879d] Joined with connection pxy:79eea043
-[2018/10/29 21:31:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3fe4051a] Joined with connection pxy:67f48fe8
-[2018/10/29 21:31:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14d0e036] Joined with connection pxy:73c6cb6e
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:78fc06b9] Joined with connection pxy:600eeb40
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:22801932] Joined with connection pxy:714bce19
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1025b6a6] Joined with connection pxy:5702346a
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:649d63d4] Joined with connection pxy:521bc0b8
-[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:471905ce] Joined with connection pxy:5fc1f695
-[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7b874b10] Joined with connection pxy:10974f93
+[2018/10/31 19:46:57 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[2018/10/31 19:46:57 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
+[2018/10/31 19:46:57 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/10/31 19:46:57 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: cbdb5a2633e3b93c69d48802b952730c
+[2018/10/31 19:46:57 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://pdbhu6.natappfree.cc
+[2018/10/31 19:48:56 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:495386f2] Server failed to write StartProxy: EOF
+[2018/10/31 19:48:56 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1a2c3982] Joined with connection pxy:17ba4e40
+[2018/10/31 19:48:56 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:53187ad8] Joined with connection pxy:4b6bf4e8
+[2018/10/31 19:48:56 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:30ab8925] Joined with connection pxy:735398d7
+[2018/10/31 19:49:18 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4173725c] Joined with connection pxy:56a75f7e
+[2018/10/31 19:49:18 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:31318d59] Joined with connection pxy:5cde76d9
+[2018/10/31 19:49:19 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:67e13f59] Joined with connection pxy:2903be85
+[2018/10/31 19:50:34 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:383dd101] Server failed to write StartProxy: EOF
+[2018/10/31 19:50:34 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:3aa646b8] Server failed to write StartProxy: EOF
+[2018/10/31 19:50:34 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:f358284] Server failed to write StartProxy: EOF
+[2018/10/31 19:50:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2f0f4652] Joined with connection pxy:4218bb07
+[2018/10/31 19:57:20 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:605ca44c] Joined with connection pxy:5ebaae04
+[2018/10/31 19:57:20 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3cd6744] Joined with connection pxy:34478113
+[2018/10/31 19:57:21 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3472f1ea] Joined with connection pxy:620622d8
+[2018/10/31 19:57:21 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3217afe3] Joined with connection pxy:1adab38b
+[2018/10/31 19:57:21 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:578d80ac] Joined with connection pxy:34e7b1db
+[2018/10/31 20:04:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
