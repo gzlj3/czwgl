@@ -1,46 +1,72 @@
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 2232ae5c831347a78b0a1354dc785a61
-[2018/10/29 19:08:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://c6paje.natappfree.cc
-[2018/10/29 19:27:09 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 19:40:42 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1d887b37] Joined with connection pxy:1ce8b9a6
-[2018/10/29 19:40:53 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14a4510d] Joined with connection pxy:45bf5ee3
-[2018/10/29 19:41:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:219f2469] Joined with connection pxy:1d6b1dd0
-[2018/10/29 19:41:18 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2779cda8] Joined with connection pxy:718f021e
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:6cf834ed] Joined with connection pxy:46d821c8
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:170e8507] Joined with connection pxy:12ace7b3
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:25f6e708] Joined with connection pxy:728bce28
-[2018/10/29 19:44:13 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1ecbac79] Joined with connection pxy:708a7e88
-[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4bc3e54e] Joined with connection pxy:450b1595
-[2018/10/29 19:44:32 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2f5a24f4] Joined with connection pxy:45f0f9ae
-[2018/10/29 19:44:43 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:645ec675] Joined with connection pxy:6f03f80d
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:41b1835c] Joined with connection pxy:6e2c1f56
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3c2d7fd4] Joined with connection pxy:2ba0a9cb
-[2018/10/29 19:44:55 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:26b0ae09] Joined with connection pxy:1ddf4c90
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:4680d604] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:5ae7e1c6] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:38af1995] Server failed to write StartProxy: EOF
-[2018/10/29 19:46:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1c49ed5f] Joined with connection pxy:42b50b39
-[2018/10/29 19:47:00 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:343a1ee] Joined with connection pxy:57e02083
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 20:21:59 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
-[2018/10/29 21:27:01 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:4f64fc69] Joined with connection pxy:6af63fd3
-[2018/10/29 21:27:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:2333879d] Joined with connection pxy:79eea043
-[2018/10/29 21:31:10 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:3fe4051a] Joined with connection pxy:67f48fe8
-[2018/10/29 21:31:41 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:14d0e036] Joined with connection pxy:73c6cb6e
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:78fc06b9] Joined with connection pxy:600eeb40
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:22801932] Joined with connection pxy:714bce19
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1025b6a6] Joined with connection pxy:5702346a
-[2018/10/29 21:31:47 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:649d63d4] Joined with connection pxy:521bc0b8
-[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:471905ce] Joined with connection pxy:5fc1f695
-[2018/10/29 21:31:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7b874b10] Joined with connection pxy:10974f93
+[2018/12/06 11:56:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[2018/12/06 11:56:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [web] Serving web interface on 127.0.0.1:4040
+[2018/12/06 11:56:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/12/06 11:56:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/12/06 11:56:48 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [view] [term] Resize event, redrawing
+[2018/12/06 11:56:49 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 11:56:49 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://9qxb47.natappfree.cc
+[2018/12/06 11:57:50 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:1a975c69] Server failed to write StartProxy: EOF
+[2018/12/06 11:57:50 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:7ff37060] Joined with connection pxy:6b59e2ba
+[2018/12/06 11:57:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:44f690a6] Joined with connection pxy:4c803f3
+[2018/12/06 11:57:52 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:cda8450] Joined with connection pxy:4509ee52
+[2018/12/06 11:58:13 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [pxy:4c803f3] Copied 605 bytes to prv:44f690a6 before failing with error read tcp 192.168.68.52:41800->112.74.89.58:443: wsarecv: An established connection was aborted by the software in your host machine.
+[2018/12/06 11:58:13 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:44f690a6] Copied 367104 bytes to pxy:4c803f3 before failing with error write tcp 192.168.68.52:41800->112.74.89.58:443: wsasend: An established connection was aborted by the software in your host machine.
+[2018/12/06 11:58:25 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-06 11:58:09.0775716 +0800 CST, Last pong: 2018-12-06 11:57:49.0854282 +0800 CST
+[2018/12/06 11:58:25 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/06 11:58:25 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:41666->112.74.89.58:443: use of closed network connection
+[2018/12/06 11:58:25 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/06 11:58:29 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:6d1e1bd] Server failed to write StartProxy: EOF
+[2018/12/06 11:58:29 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 11:58:29 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://vb9nvs.natappfree.cc
+[2018/12/06 11:59:11 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:1588df6f] Joined with connection pxy:1d79e111
+[2018/12/06 11:59:54 CST] [WARN] (ngrok/log.(*PrefixLogger).Warn:87) [prv:44f690a6] Failed to extract response body: io: read/write on closed pipe
+[2018/12/06 12:20:16 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:6fd8c48e] Joined with connection pxy:17da74e9
+[2018/12/06 12:35:20 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:57e74f6f] Server failed to write StartProxy: EOF
+[2018/12/06 12:35:20 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [prv:5e653463] Joined with connection pxy:3bd52e7a
+[2018/12/06 13:31:27 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-06 13:31:12.0270301 +0800 CST, Last pong: 2018-12-06 12:38:09.2438533 +0800 CST
+[2018/12/06 13:31:27 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/06 13:31:27 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:41910->112.74.89.58:443: use of closed network connection
+[2018/12/06 13:31:27 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/06 13:31:49 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/06 13:31:49 CST] [INFO] (ngrok/log.Info:112) Waiting 2 seconds before reconnecting
+[2018/12/06 13:31:51 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 13:31:51 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://vc739v.natappfree.cc
+[2018/12/06 13:34:07 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-06 13:33:51.4951512 +0800 CST, Last pong: 2018-12-06 13:33:31.5010076 +0800 CST
+[2018/12/06 13:34:07 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/06 13:34:07 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:47331->112.74.89.58:443: use of closed network connection
+[2018/12/06 13:34:07 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/06 13:34:29 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/06 13:34:29 CST] [INFO] (ngrok/log.Info:112) Waiting 2 seconds before reconnecting
+[2018/12/06 13:34:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 13:34:34 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://7c57ki.natappfree.cc
+[2018/12/06 13:46:10 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-06 13:45:54.8325237 +0800 CST, Last pong: 2018-12-06 13:45:34.8393802 +0800 CST
+[2018/12/06 13:46:10 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/06 13:46:10 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:25373->112.74.89.58:443: use of closed network connection
+[2018/12/06 13:46:10 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/06 13:46:28 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [pxy:5d566347] Server failed to write StartProxy: EOF
+[2018/12/06 13:46:32 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/06 13:46:32 CST] [INFO] (ngrok/log.Info:112) Waiting 2 seconds before reconnecting
+[2018/12/06 13:46:35 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 13:46:35 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://nta9as.natappfree.cc
+[2018/12/06 17:15:30 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-06 17:15:15.1389321 +0800 CST, Last pong: 2018-12-06 17:14:55.1477887 +0800 CST
+[2018/12/06 17:15:30 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/06 17:15:30 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:50799->112.74.89.58:443: use of closed network connection
+[2018/12/06 17:15:30 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/06 17:15:44 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/06 17:15:44 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://5fbx9j.natappfree.cc
+[2018/12/07 08:27:42 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Last ping: 2018-12-07 08:27:27.2710441 +0800 CST, Last pong: 2018-12-06 17:30:44.5520915 +0800 CST
+[2018/12/07 08:27:42 CST] [EROR] (ngrok/log.(*PrefixLogger).Error:91) [client] Connection stale, haven't gotten PongMsg in 15 seconds
+[2018/12/07 08:27:42 CST] [EROR] (ngrok/log.Error:120) control recovering from failure read tcp 192.168.68.52:36839->112.74.89.58:443: use of closed network connection
+[2018/12/07 08:27:42 CST] [INFO] (ngrok/log.Info:112) Waiting 1 seconds before reconnecting
+[2018/12/07 08:28:04 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/07 08:28:04 CST] [INFO] (ngrok/log.Info:112) Waiting 2 seconds before reconnecting
+[2018/12/07 08:28:27 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/07 08:28:27 CST] [INFO] (ngrok/log.Info:112) Waiting 4 seconds before reconnecting
+[2018/12/07 08:28:52 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/07 08:28:52 CST] [INFO] (ngrok/log.Info:112) Waiting 8 seconds before reconnecting
+[2018/12/07 08:29:21 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/07 08:29:21 CST] [INFO] (ngrok/log.Info:112) Waiting 16 seconds before reconnecting
+[2018/12/07 08:29:58 CST] [EROR] (ngrok/log.Error:120) control recovering from failure dial tcp 112.74.89.58:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+[2018/12/07 08:29:58 CST] [INFO] (ngrok/log.Info:112) Waiting 30 seconds before reconnecting
+[2018/12/07 08:30:29 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Authenticated with server, client id: 8e4984abd04ff348c87ed85db0dd27b8
+[2018/12/07 08:30:29 CST] [INFO] (ngrok/log.(*PrefixLogger).Info:83) [client] Tunnel established at http://piwepe.natappfree.cc

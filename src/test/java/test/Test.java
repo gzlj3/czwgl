@@ -17,13 +17,28 @@ import com.lj.czwgl.utils.NetWorkHelper;
 public class Test {
 
 	public static void main(String[] args) throws Exception {
-		// AccessToken token =
-		// getAccessToken("wx5682b088ee6d92a4","3a5489c45254edc27f80f397a512d5ea");
+		//测试公众号
+//		 AccessToken token =
+//		 getAccessToken("wx5682b088ee6d92a4","3a5489c45254edc27f80f397a512d5ea");
+		 //服务号
 		// AccessToken token =
 		// getAccessToken("wxa49564198a94c518","48491262cd07c6b0c104c0b687250d6c");
-		// System.out.println(token.getAccessToken());
-		String strtoken = "15_nHnIMSDuqTfbrK4NNqPzMoGQOdZhEgd2Z9vaOkDWIkO3dce1i6p1TAzDj6d7pv9K63k7-rstLlxZMRaFxMBPY8ZBUraReSBFBxAlt0CEPd5y1yvGsnQMvi2QbiCbUKZaZX-7jBeul7G7DYriUSHaABADBQ";
+		//小程序的tokey
+//		 AccessToken token =
+//		 getAccessToken("wx074eecae1210da4a","ad174bf3f0d99c9962e3329b475ef708");
+//		 String strtoken = token.getAccessToken();
+		String strtoken = "16_r1E4RD9uPqx_-i59e84tbAWvMGpT_VF5E5ExY2_n5BXUqGj-xNRxntFot0lDTTOLi8y9NwVYiiF3bpziOieJEhLHVemnbtPbrWnJ1SewLOwoNuSrKu1k_71okpe0-sSCLNN_EUJpxRVJXHCkCVBiAFANGM";
+		 System.out.println(strtoken);
 		NetWorkHelper netHelper = new NetWorkHelper();
+//小程序liujun的openid: on_Li5Pa4d5XQklE_NCiI2IoPKsM
+//		String url = String
+//		.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",
+//				strtoken);
+// String body = "{\"touser\":\"on_Li5Pa4d5XQklE_NCiI2IoPKsM\",\"msgtype\":\"text\",\"text\":{\"content\":\"Hello World\"}}";
+// 
+//String result = netHelper.postHttps(url, body);
+//System.out.println(result);
+		
 		// 模板消息测试
 		// 设置所属行业
 		// String url = String
@@ -47,23 +62,30 @@ public class Test {
 		// System.out.println(result);
 		//
 		// //发送模板消息
-//		TemplateObj tmobj = new TemplateObj();
-//		JSONObject jsonObj = new JSONObject();
+		TemplateObj tmobj = new TemplateObj();
+		JSONObject jsonObj = new JSONObject();
 //		jsonObj.put("template_id",
 //				"omtuiMD0-VxUMRkABVq6D-FQ8heRGbnlT7uw-HWMFX8");
-//		jsonObj.put("touser", "oLXPC0uDnrwiQ-GcwnRcQh4jTyiM");
+		jsonObj.put("template_id",
+				"50_-U2e4vq8STuhhDTqEWVywu1RQYFSzujZv_NG2h6k");
+		
+//		jsonObj.put("touser", "on_Li5Pa4d5XQklE_NCiI2IoPKsM");  //liujun 小程序
+		jsonObj.put("touser", "oLXPC0uDnrwiQ-GcwnRcQh4jTyiM");  //测试号
+		
+		jsonObj.put("form_id", "1542156183323");
+		
 //		jsonObj.put("url", "http://c6paje.natappfree.cc");
-//		JSONObject dataObjs = new JSONObject();
-//		DataObj dataObj = new DataObj("测试参数", "red");
-//		dataObjs.put("para1", dataObj);
-//		jsonObj.put("data", dataObjs);
-//		System.out.println(jsonObj.toJSONString());
-//		String url = String
-//				.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",
-//						strtoken);
-//		String body = jsonObj.toJSONString();
-//		String result = netHelper.postHttps(url, body);
-//		System.out.println(result);
+		JSONObject dataObjs = new JSONObject();
+		DataObj dataObj = new DataObj("中华人民共和国", "red");
+		dataObjs.put("para1", dataObj);
+		jsonObj.put("data", dataObjs);
+		System.out.println(jsonObj.toJSONString());
+		String url = String
+				.format("https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=%s",
+						strtoken);
+		String body = jsonObj.toJSONString();
+		String result = netHelper.postHttps(url, body);
+		System.out.println(result);
 
 		// 获取用户列表
 //		 String url = String
@@ -76,11 +98,11 @@ public class Test {
 //		 String result = netHelper.getHttpsResponse(url, "");
 //		 System.out.println(result);
 		//生成二维码
-		 String url = String
-		 .format("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=%s",strtoken);
-		 String body = "{\"expire_seconds\":604800,\"action_name\":\"QR_SCENE\",\"action_info\":{\"scene\":{\"scene_id\":123}}}";
-		String result = netHelper.postHttps(url, body);
-		 System.out.println(result);
+//		 String url = String
+//		 .format("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=%s",strtoken);
+//		 String body = "{\"expire_seconds\":604800,\"action_name\":\"QR_SCENE\",\"action_info\":{\"scene\":{\"scene_id\":123}}}";
+//		String result = netHelper.postHttps(url, body);
+//		 System.out.println(result);
 //		 {"ticket":"https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEQ8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAycDlaN2d4SlBmMmkxUW8zdzFyMWEAAgSYCNdbAwSAOgkA","expire_seconds":604800,"url":"http:\/\/weixin.qq.com\/q\/02p9Z7gxJPf2i1Qo3w1r1a"}
 
 	}
