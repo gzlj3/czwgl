@@ -1,5 +1,6 @@
 package com.lj.czwgl.service.impl;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,7 +71,8 @@ public class CzwglService implements ICzwglService {
 
 	@Transactional(readOnly = true)
 	public HouseDto queryZdList(String yzhid) throws Exception {
-		Iterable<House> iter = houseRepository.queryZdList(yzhid);
+		Date date = Utils.relativeDate(new Date(), Calendar.DAY_OF_MONTH, 4);
+		Iterable<House> iter = houseRepository.queryZdList(yzhid,date);
 		List<String> SelectedRowKeys = new ArrayList<String>();
 		iter.forEach(house -> {
 			house.setBz(null);
@@ -294,8 +296,9 @@ public class CzwglService implements ICzwglService {
 		Double fwfy = df + sf + jsqtfhj(house);
 		if (fwfy <= 0)
 			throw new Exception("无帐单费用");
-
-		return fwfy;
+		return new BigDecimal(fwfy).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+	
+//		return fwfy;
 	}
 
 	private Double jsdf(House house) {

@@ -16,8 +16,8 @@ public interface HouseRepository extends CrudRepository<House, String> {
 	Iterable<House> findByYzhidOrderByFwmc(String yzhid);
 	
 	@Modifying
-	@Query("select u from House u where u.yzhid=?1 and sfsz<>'0' and u.szrq<=curdate() order by u.fwmc")
-	Iterable<House> queryZdList(String yzhid);
+	@Query("select u from House u where u.yzhid=?1 and sfsz<>'0' and u.szrq<=?2 order by u.fwmc")
+	Iterable<House> queryZdList(String yzhid,Date date);
 
 	@Modifying
 	@Query("update House u set u.dbcds = ?1, u.sbcds=?2 where u.houseid = ?3")
