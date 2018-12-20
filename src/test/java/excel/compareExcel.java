@@ -20,7 +20,6 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.poi.poifs.filesystem.DocumentOutputStream;
 
 public class compareExcel {
 	public static void main(String[] args) throws Exception {
@@ -37,6 +36,8 @@ public class compareExcel {
 		if (args.length > 3) {
 			compCol1 = Integer.parseInt(args[2]);
 			compCol2 = Integer.parseInt(args[3]);
+			compCol1 --;
+			compCol2 --;
 		}
 		if (args.length > 6) {
 			resultname1 = args[4];
@@ -58,12 +59,15 @@ public class compareExcel {
 		List<String[]> resultList1 = new ArrayList<String[]>();
 		List<String[]> resultList2 = new ArrayList<String[]>();
 		int i, j;
+		int emptyCount1=0;
 		for (i = 0; i < data1.size(); i++) {
 			String[] arr1 = data1.get(i);
 			String value1 = arr1[compCol1];
 			// System.out.println(value1);
-			if (empty(value1))
+			if (empty(value1)){
+				emptyCount1 ++;
 				continue;
+			}
 			for (j = 0; j < data2.size(); j++) {
 				String[] arr2 = data2.get(j);
 				String value2 = arr2[compCol2];
@@ -82,12 +86,15 @@ public class compareExcel {
 		}
 		// 生成T2 - T1的差集
 		List<String[]> resultList3 = new ArrayList<String[]>();
+		int emptyCount2=0;
 		for (i = 0; i < data2.size(); i++) {
 			String[] arr2 = data2.get(i);
 			String value2 = arr2[compCol2];
 			// System.out.println(value1);
-			if (empty(value2))
+			if (empty(value2)){
+				emptyCount2++;
 				continue;
+			}
 			for (j = 0; j < data1.size(); j++) {
 				String[] arr1 = data1.get(j);
 				String value1 = arr1[compCol1];
@@ -113,6 +120,12 @@ public class compareExcel {
 				+ ")共：" + resultList1.size() + "条。\r\n在表2中不存在的表1记录(" + resultname2 + ")共："
 				+ resultList2.size() + "条。\r\n在表1中不存在的表2记录(" + resultname3 + ")共："
 				+ resultList3.size() + "条。\r\n");
+		if(emptyCount1>0){
+			System.out.println("表1比较列有空值数：" + emptyCount1);
+		}
+		if(emptyCount2>0){
+			System.out.println("表2比较列有空值数：" + emptyCount2);
+		}
 	}
 	
 	
@@ -256,6 +269,8 @@ public class compareExcel {
 				}
 				if (hasValue) {
 					result.add(values);
+				}else{
+					System.out.println("=====第"+(rowIndex+1)+"行数据读入错误！");
 				}
 			}
 		}
