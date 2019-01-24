@@ -28,7 +28,7 @@ public class compareExcel {
 		String resultname1 = "result1.txt";
 		String resultname2 = "result2.txt";
 		String resultname3 = "result3.txt";
-		int compCol1 = 3, compCol2 = 4;
+		int compCol1 = 10, compCol2 = 2;
 		if (args.length > 1) {
 			fname1 = args[0];
 			fname2 = args[1];
@@ -299,14 +299,15 @@ public class compareExcel {
 		if (str == null) {
 			return "";
 		}
-		int length = str.length();
-		for (int i = length - 1; i >= 0; i--) {
-			if (str.charAt(i) != 0x20) {
-				break;
-			}
-			length--;
-		}
-		return str.substring(0, length);
+		return str.trim();
+//		int length = str.length();
+//		for (int i = length - 1; i >= 0; i--) {
+//			if (str.charAt(i) != 0x20) {
+//				break;
+//			}
+//			length--;
+//		}
+//		return str.substring(0, length);
 	}
 
 	public static boolean empty(String s) {
